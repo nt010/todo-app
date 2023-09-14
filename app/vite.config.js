@@ -11,4 +11,11 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    //コンテナ外からもアクセス可能にする
+    server: {
+        host: '0.0.0.0',
+        hmr: {
+            host: 'localhost',
+        },
+    },
 });
