@@ -3,19 +3,31 @@
     "builds": [
         {
             "src": "api/index.php",
-            "use": "vercel-php@0.6.0"
+            "use": "vercel-php@0.5.2"
         },
         {
             "src": "public/**",
-            "use": "vercel-php@0.6.0"
+            "use": "vercel-php@0.5.2"
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "/api/index.php"
+            "dest": "/public/index.php"
         }
     ],
+    "headers": [
+        {
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "no-store, no-cache, must-revalidate, proxy-revalidate"
+                }
+            ]
+        }
+    ],
+    
     "env": {
         "APP_NAME": "Laravel Vercel",
         "APP_DEBUG": "false",
