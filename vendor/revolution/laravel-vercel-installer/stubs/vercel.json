@@ -13,9 +13,21 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "/api/index.php"
+            "dest": "/public/index.php"
         }
     ],
+    "headers": [
+        {
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "no-store, no-cache, must-revalidate, proxy-revalidate"
+                }
+            ]
+        }
+    ],
+    
     "env": {
         "APP_NAME": "Laravel Vercel",
         "APP_DEBUG": "false",

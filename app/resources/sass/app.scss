@@ -14,8 +14,11 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 @import '@fortawesome/fontawesome-free/scss/solid';
 @import '@fortawesome/fontawesome-free/scss/brands';
 
+.navbar-brand{
+    text-align: center;
+}
 .bg-green {
-    background-color: #658e7c;
+    background-color: #3717ad;
 }
 
 .btn-green {
@@ -37,6 +40,6 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 }
 
 .header-green {
-    color: #658e7c;
+    color: #20469f;
     font-weight: bolder;
 }
