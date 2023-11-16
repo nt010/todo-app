@@ -46,6 +46,14 @@ require __DIR__.'/../vendor/autoload.php';
 
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
+$file_path = 'path/to/your/file'; // ファイルのパスを指定します
+
+if (file_exists($file_path)) {
+    echo "ファイルが存在します";
+} else {
+    echo "ファイルが存在しません";
+}
+
 $kernel = $app->make(Kernel::class);
 
 $response = $kernel->handle(
