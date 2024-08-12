@@ -1,2 +1,2 @@
 # todo-app
-デプロイ中です
+Laravelを使ってTodo管理のサイトを作りました
